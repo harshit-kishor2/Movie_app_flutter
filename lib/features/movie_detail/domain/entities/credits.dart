@@ -14,9 +14,5 @@ class CreditsEntity extends Equatable {
   final List<CrewEntity> crew;
 
   @override
-  List<Object> get props => [
-        id,
-        cast,
-        crew,
-      ];
+  List<Object> get props => [id, cast, crew];
 }
