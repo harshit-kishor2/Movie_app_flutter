@@ -1,20 +1,20 @@
-// ignore_for_file: constant_identifier_names
+import 'package:movie_app/core/constant/constant.dart';
 
 class ErrorMapper {
-  static const _HTTP_CODE_UNAUTHORIZED = 401;
-  static const _HTTP_CODE_NOT_FOUND = 404;
-  static const _LOCAL_DB_NOT_FOUND = 1404;
+  static const httpCodeUnauthorized = 401;
+  static const httpCodeNotFound = 404;
+  static const httpLocalDbNotFound = 1404;
 
   static String getErrorMessage(int statusCode) {
     switch (statusCode) {
-      case _HTTP_CODE_NOT_FOUND:
-        return "Data not found";
-      case _HTTP_CODE_UNAUTHORIZED:
-        return "Wrong credentials.";
-      case _LOCAL_DB_NOT_FOUND:
-        return "Data not found on local database";
+      case httpCodeNotFound:
+        return StringConst.noDataFound;
+      case httpCodeUnauthorized:
+        return StringConst.wrongCredentials;
+      case httpLocalDbNotFound:
+        return StringConst.noDataFoundLocalDB;
       default:
-        return "Something wrong. [$statusCode]";
+        return "${StringConst.somethingWrong} [$statusCode]";
     }
   }
 }

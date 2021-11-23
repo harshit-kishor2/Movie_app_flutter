@@ -50,7 +50,7 @@ Divider getDivider({
   double height = 10,
 }) {
   return Divider(
-    color: ColorConst.GREY_COLOR,
+    color: ColorConst.greyColor,
     height: height,
   );
 }
@@ -66,7 +66,7 @@ SizedBox getSizeBox({
 
 AppBar getAppBarWithBackBtn({
   String title = '',
-  Color bgColor = ColorConst.APP_COLOR,
+  Color bgColor = ColorConst.appColor,
   double fontSize = 15,
   String titleTag = '',
   Widget? icon,
@@ -81,7 +81,7 @@ AppBar getAppBarWithBackBtn({
       tag: titleTag,
       child: getTxtColor(
         msg: title,
-        txtColor: ColorConst.BLACK_COLOR,
+        txtColor: ColorConst.blackColor,
         fontSize: fontSize,
         fontWeight: FontWeight.bold,
       ),
@@ -91,41 +91,9 @@ AppBar getAppBarWithBackBtn({
 
 //  {END TEXT VIEW}
 
-// void showSnackBar(BuildContext context, String message) async {
-//   try {
-//     var snackbar = SnackBar(
-//       content: getTxtWhiteColor(msg: message),
-//       backgroundColor: ColorConst.GREEN_COLOR,
-//       duration: const Duration(seconds: 3),
-// //    action: SnackBarAction(
-// //        label: "Undo",
-// //        onPressed: () {
-// //          logDubug(message + " undo");
-// //        }),
-//     );
-//     Scaffold.of(context).hideCurrentSnackBar(reason: SnackBarClosedReason.hide);
-//     await Scaffold.of(context).showSnackBar(snackbar);
-//   } catch (e) {
-//     print('object ' + e.toString());
-//   }
-// }
-
 bool isDarkMode() {
   // ThemeModel.isDarkTheme;
   var brightness = SchedulerBinding.instance?.window.platformBrightness;
   final isDarkMode = brightness == Brightness.dark;
-  // print("IS Dark Mode system : $isDarkMode \n app : ${ThemeModel.dark}");
-  // ScopedModel.of<ThemeModel>(context).getTheme;
   return isDarkMode; //appDakMode;
 }
-
-// Color getColor(Color color) {
-//   if (color == ColorConst.WHITE_COLOR)
-//     return isDarkMode() ? ColorConst.BLACK_COLOR : ColorConst.WHITE_COLOR;
-//   else if (color == ColorConst.BLACK_COLOR)
-//     return isDarkMode() ? ColorConst.WHITE_COLOR : ColorConst.BLACK_COLOR;
-//   else if (color == ColorConst.WHITE_BG_COLOR)
-//     return isDarkMode() ? ColorConst.BLACK_BG_COLOR : ColorConst.WHITE_BG_COLOR;
-//   else
-//     return color;
-// }

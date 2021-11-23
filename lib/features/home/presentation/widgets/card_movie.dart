@@ -1,6 +1,7 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:movie_app/core/constant/constant.dart';
 import 'package:movie_app/core/shared_component/widget_helper.dart';
 import 'package:movie_app/features/home/data/models/result_model.dart';
 import 'package:movie_app/features/movie_detail/presentation/pages/details_page.dart';
@@ -37,7 +38,7 @@ class CardMovie extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       SvgPicture.asset(
-                        "assets/icons/star_fill.svg",
+                        AssetsConst.starIcon,
                         height: 20,
                       ),
                       getSizeBox(height: 15),

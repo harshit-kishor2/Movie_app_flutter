@@ -36,8 +36,8 @@ class Category extends StatelessWidget {
           children: <Widget>[
             Text(
               [
-                StringConst.movie_now_playing,
-                StringConst.movie_coming_soon,
+                StringConst.movieNowPlaying,
+                StringConst.movieComingSoon,
               ][index],
               style: Theme.of(context).textTheme.headline5!.copyWith(
                     fontWeight: FontWeight.w600,

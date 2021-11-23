@@ -2,7 +2,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPreferenceModule {
   final SharedPreferences pref;
-  static const String _prefUser = "user_data";
+  static const String _prefUser = "user_data1";
 
   SharedPreferenceModule({required this.pref});
 

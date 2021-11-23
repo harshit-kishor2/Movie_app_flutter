@@ -31,7 +31,7 @@ Text getTxtWhiteColor(
     maxLines: maxLines,
     textAlign: textAlign,
     style: _getFontStyle(
-        txtColor: ColorConst.WHITE_COLOR,
+        txtColor: ColorConst.whiteColor,
         fontSize: fontSize,
         fontWeight: fontWeight),
   );
@@ -49,7 +49,7 @@ Text getTxtBlackColor({
     textAlign: textAlign,
     maxLines: maxLines,
     style: _getFontStyle(
-      txtColor: ColorConst.BLACK_COLOR,
+      txtColor: ColorConst.blackColor,
       fontSize: fontSize,
       fontWeight: fontWeight,
     ),
@@ -68,7 +68,7 @@ Text getTxtGreyColor({
     textAlign: textAlign,
     maxLines: maxLines,
     style: _getFontStyle(
-      txtColor: ColorConst.GREY_COLOR,
+      txtColor: ColorConst.greyColor,
       fontSize: fontSize,
       fontWeight: fontWeight,
     ),
@@ -99,7 +99,7 @@ TextStyle _getFontStyle({
   required Color txtColor,
   double fontSize = 15,
   FontWeight fontWeight = FontWeight.normal,
-  String fontFamily = AssetsConst.ZILLASLAB_FONT,
+  String fontFamily = AssetsConst.zillaSlabFont,
   TextDecoration txtDecoration = TextDecoration.none,
 }) {
   return TextStyle(

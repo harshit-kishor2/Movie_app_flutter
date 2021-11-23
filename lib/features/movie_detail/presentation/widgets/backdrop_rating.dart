@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:movie_app/core/constant/constant.dart';
 import 'package:movie_app/features/home/domain/entities/result_entity.dart';
 
 class BackdropAndRating extends StatelessWidget {
@@ -56,7 +57,7 @@ class BackdropAndRating extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  SvgPicture.asset("assets/icons/star_fill.svg"),
+                  SvgPicture.asset(AssetsConst.starIcon),
                   RichText(
                     textAlign: TextAlign.center,
                     text: TextSpan(
