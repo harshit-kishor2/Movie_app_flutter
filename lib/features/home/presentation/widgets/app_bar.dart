@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-AppBar appbar() {
+AppBar appbar(appbarClick) {
   return AppBar(
     backgroundColor: Colors.green,
     elevation: 0,
@@ -11,7 +11,7 @@ AppBar appbar() {
         "assets/icons/menu.svg",
         color: Colors.white,
       ),
-      onPressed: () {},
+      onPressed: appbarClick,
     ),
     actions: <Widget>[
       IconButton(

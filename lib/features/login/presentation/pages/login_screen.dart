@@ -5,7 +5,6 @@ import 'package:movie_app/core/shared_component/custom_button.dart';
 import 'package:movie_app/core/shared_component/custom_text.dart';
 import 'package:movie_app/core/shared_component/custom_toast.dart';
 import 'package:movie_app/core/shared_component/widget_helper.dart';
-import 'package:movie_app/core/util/global_utility.dart';
 import 'package:movie_app/features/login/presentation/bloc/bloc.dart';
 import 'package:movie_app/router.dart';
 

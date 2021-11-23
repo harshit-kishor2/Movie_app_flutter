@@ -14,7 +14,7 @@ class BackdropAndRating extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       // 40% of our total height
       height: size.height * 0.4,
       child: Stack(
@@ -83,7 +83,7 @@ class BackdropAndRating extends StatelessWidget {
           SafeArea(
             child: GestureDetector(
               onTap: () => Navigator.maybePop(context),
-              child: Icon(
+              child: const Icon(
                 Icons.chevron_left,
                 size: 44,
                 color: Colors.white,

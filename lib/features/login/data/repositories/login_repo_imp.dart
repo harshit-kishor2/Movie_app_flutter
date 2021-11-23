@@ -1,7 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:movie_app/core/base/base_failure.dart';
 import 'package:movie_app/core/module/network_info.dart';
-import 'package:movie_app/core/util/global_utility.dart';
 import 'package:movie_app/features/login/data/datasources/login_datasource.dart';
 import 'package:movie_app/features/login/domain/entities/login_entity.dart';
 import 'package:movie_app/features/login/domain/repositories/login_repo.dart';

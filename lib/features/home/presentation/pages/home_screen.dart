@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie_app/core/shared_component/custom_toast.dart';
+import 'package:movie_app/core/shared_component/drawer.dart';
 import 'package:movie_app/core/shared_component/widget_helper.dart';
 import 'package:movie_app/core/util/shared_preference.dart';
 import 'package:movie_app/features/home/data/models/result_model.dart';
@@ -24,6 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selected = 0;
   final List<ResultModel> _movies = [];
   final ScrollController _scrollController = ScrollController();
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
@@ -41,10 +43,16 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
+  appbarClick() {
+    _scaffoldKey.currentState!.openDrawer();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appbar(),
+      key: _scaffoldKey,
+      appBar: appbar(appbarClick),
+      drawer: const MyDrawer(),
       body: SafeArea(
         child: BlocConsumer<HomeBloc, HomeState>(
           listener: (context, state) {

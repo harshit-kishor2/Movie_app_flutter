@@ -9,13 +9,13 @@ class CardMovie extends StatelessWidget {
   const CardMovie({
     Key? key,
     required this.item,
-  }) : super();
+  }) : super(key: key);
 
   final ResultModel item;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 40),
