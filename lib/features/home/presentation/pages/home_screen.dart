@@ -6,6 +6,7 @@ import 'package:movie_app/core/util/shared_preference.dart';
 import 'package:movie_app/features/home/data/models/result_model.dart';
 import 'package:movie_app/features/home/domain/entities/movies_enum.dart';
 import 'package:movie_app/features/home/presentation/bloc/bloc.dart';
+import 'package:movie_app/features/home/presentation/widgets/app_bar.dart';
 import 'package:movie_app/features/home/presentation/widgets/card_movie.dart';
 import 'package:movie_app/features/home/presentation/widgets/category.dart';
 import 'package:movie_app/injection_container.dart';
@@ -43,6 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: appbar(),
       body: SafeArea(
         child: BlocConsumer<HomeBloc, HomeState>(
           listener: (context, state) {

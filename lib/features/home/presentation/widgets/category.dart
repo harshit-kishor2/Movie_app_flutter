@@ -15,7 +15,8 @@ class Category extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.black,
-      margin: const EdgeInsets.symmetric(vertical: 10.0),
+      margin: const EdgeInsets.symmetric(vertical: 5.0),
+      padding: const EdgeInsets.symmetric(vertical: 3.0),
       height: 60,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
@@ -31,7 +32,7 @@ class Category extends StatelessWidget {
       child: GestureDetector(
         onTap: () => onSelectChange(index),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Text(
               [
